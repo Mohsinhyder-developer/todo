@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="user-profile" onclick="editProfile()">
+                <img src="https://www.shutterstock.com/shutterstock/photos/2281862025/display_1500/stock-vector-vector-flat-illustration-in-grayscale-avatar-user-profile-person-icon-gender-neutral-silhouette-2281862025.jpg" alt="Profile" class="profile-pic" id="profilePic">
+                <span id="userName">User Name</span>
+            </div>
+        </div>
+        <div class="nav-lists">
+            <div class="nav-item active" data-view="all">
+                <i class="fas fa-tasks"></i>
+                <span>All Tasks</span>
+                <span class="list-count">0</span>
+            </div>
+            <div class="nav-item" data-view="important">
+                <i class="fas fa-star"></i>
+                <span>Important</span>
+                <span class="list-count">0</span>
+            </div>
+            <div class="nav-item" data-view="completed">
+                <i class="fas fa-check-circle"></i>
+                <span>Completed</span>
+                <span class="list-count">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="main-header">
+            <h1 id="currentView">All Tasks</h1>
+        </div>
+        <div class="tasks-container">
+            <div class="add-task-container">
+                <input type="text" class="add-task-input" placeholder=" Add a task" id="newTaskInput">
+            </div>
+            <ul class="task-list" id="taskList"></ul>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div class="modal" id="editTaskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Task</h2>
+                <button class="task-btn" onclick="closeModal('editTaskModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <input type="text" class="modal-input" id="editTaskInput">
+            <div class="modal-actions">
+                <button class="modal-btn" onclick="closeModal('editTaskModal')">Cancel</button>
+                <button class="modal-btn primary" onclick="saveEditedTask()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button class="task-btn" onclick="closeModal('editProfileModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <input type="text" class="modal-input" id="editNameInput" placeholder="Enter your name">
+            <input type="file" class="modal-input" id="profilePicInput" accept="image/*">
+            <div class="modal-actions">
+                <button class="modal-btn" onclick="closeModal('editProfileModal')">Cancel</button>
+                <button class="modal-btn primary" onclick="saveProfile()">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/script.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
