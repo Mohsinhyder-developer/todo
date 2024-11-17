@@ -12,12 +12,6 @@ Mark Todos as Complete: Toggle the completion status of tasks.
 Delete Todos: Remove completed or unwanted tasks.
 Getting Started:
 
-Clone the Repository:
-
-Bash
-git clone https://github.com/your-username/your-repo-name.git
-Use code with caution.
-
 Install Dependencies:
 
 Bash
