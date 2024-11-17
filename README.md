@@ -37,8 +37,10 @@ Technology Stack:
 
 Frontend: EJS
 Backend: Node.js, Express.js
-Database: (Specify your database, e.g., MongoDB, SQLite)
+Database: ( MongoDB)
 Contributing:
+
+Live Demo  https://mohsinhyder-developer.github.io/Fullstack-todo-app/
 
 Feel free to contribute to this project by:
 
