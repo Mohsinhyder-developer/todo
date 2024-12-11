@@ -1,161 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do Now</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <div class="sec-one">
-            <h3 class="h3">Create Account</h3>
-            <p class="">Sign up to get started!</p>
-          
-            <form method="post" action="/create">
-                <input class="" type="text" placeholder="Username" name="username">
-                <input class="" type="email" placeholder="Email" name="email">
-                <input class="" type="password" placeholder="Password" name="password">
-                <input class="button" type="submit" value="Sign up" >
-                <p class="para">Already have an account? <a href="/login">Log In</a></p>
-            </form>
-        </div>
-        <div class="sec-two">
-            <img class="hide" src="https://img.freepik.com/free-vector/placeholder-concept-illustration_114360-4847.jpg?t=st=1731509317~exp=1731512917~hmac=cf2e62a78c40abb40fcaa655b2adbbe529222545fed405670dbb720aeff1b47c&w=740" alt="">
-        </div>
+      <div class="sec-one">
+        <h3 class="h3">Create Account</h3>
+        <p class="">Sign up to get started!</p>
+
+        <form method="post" action="/create">
+          <input
+            required
+            class="in"
+            type="text"
+            placeholder="Username"
+            name="username"
+          />
+          <input
+            required
+            class="in"
+            type="email"
+            placeholder="Email"
+            name="email"
+          />
+          <input
+            required
+            class="in"
+            type="password"
+            placeholder="Password"
+            name="password"
+          />
+          <input class="button" type="submit" value="Sign up" />
+          <p class="para">
+            Already have an account? <a href="/login">Log In</a>
+          </p>
+        </form>
+      </div>
+      <div class="sec-two">
+        <img
+          class="hide"
+          src="https://img.freepik.com/free-vector/placeholder-concept-illustration_114360-4847.jpg?t=st=1731509317~exp=1731512917~hmac=cf2e62a78c40abb40fcaa655b2adbbe529222545fed405670dbb720aeff1b47c&w=740"
+          alt=""
+        />
+      </div>
     </div>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'montserrat',sans-serif;
-        }
-        html,body{
-            width: 100%;
-            height: 100%;
-        }
-       .main{
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "montserrat", sans-serif;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .main {
         width: 100%;
         height: 100%;
         display: flex;
-       }
-       .sec-one{
+      }
+      .sec-one {
         width: 50%;
         height: 100%;
-       }
-       h3{
+      }
+      h3 {
         font-size: 2.5vw;
         display: flex;
         align-items: center;
         justify-content: center;
         padding-top: 1vw;
-       }
-       p{
+      }
+      p {
         display: flex;
         align-items: center;
         justify-content: center;
-       font-size: 2vw;
-       }
-       .sec-one form{
+        font-size: 2vw;
+      }
+      .sec-one form {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding-top: 4vw;
         outline-style: none;
-       }
-       input{
+      }
+
+      input {
         align-items: center;
         justify-content: center;
         padding: 2vw;
         outline: none;
         width: 35vw;
         font-size: 1.5vw;
-       
-       }
-       .button{
+      }
+      .button {
         margin-top: 3vw;
         background-color: rgba(0, 128, 0, 0.473);
         padding: 1vw;
         border-radius: 3vw;
- 
-       }
-       .para{
+      }
+      .para {
         margin-top: 1.5vw;
         font-size: 1.2vw;
-       }
-       a{
+      }
+      a {
         color: blue;
-       }
-       a:hover{
+      }
+      a:hover {
         text-decoration: underline;
-       }
-       .sec-two{
+      }
+      .sec-two {
         width: 50%;
         height: 100%;
-       }
-       .sec-two img{
+      }
+      .sec-two img {
         height: 100%;
         width: 100%;
-       object-fit: cover;
-       }
-       @media screen and (max-width: 800px) {
-        .hide{
-            display: none;
+        object-fit: cover;
+      }
+      @media screen and (max-width: 800px) {
+        .hide {
+          display: none;
         }
-        .main{
-            height: 100%;
-            width: 100%;
+        .main {
+          height: 100%;
+          width: 100%;
         }
-        .sec-two{
-            display: none;
+        .sec-two {
+          display: none;
         }
-        .sec-one{
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            left: 10%;
+        .sec-one {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          left: 10%;
         }
-        h3{
-            margin-top: 8vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 4vh;
-            width: 100%;
+        h3 {
+          margin-top: 8vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 4vh;
+          width: 100%;
         }
-        p{
-            font-size: 2.1vh;
+        p {
+          font-size: 2.1vh;
         }
-        form{
-            margin-top: 1vh;
-            display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 4vh;
-        outline-style: none;
+        form {
+          margin-top: 1vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-top: 4vh;
+          outline-style: none;
         }
-        input{
-            margin-top: 5vh;
-            align-items: center;
-        justify-content: center;
-        padding: 2vw;
-        outline: none;
-        width: 40vh;
-        font-size: 3vh;
+        input {
+          margin-top: 5vh;
+          align-items: center;
+          justify-content: center;
+          padding: 2vw;
+          outline: none;
+          width: 40vh;
+          font-size: 3vh;
         }
-        .button{
-        margin-top: 16vh;
-        background-color: rgba(0, 128, 0, 0.473);
-        padding: 1vh;
-        border-radius: 2.7vh;
+        .button {
+          margin-top: 16vh;
+          background-color: rgba(0, 128, 0, 0.473);
+          padding: 1vh;
+          border-radius: 2.7vh;
         }
-       }
+        .para {
+          margin-top: 2.5vh;
+          font-size: 1.5vh;
+        }
+      }
     </style>
-</body>
+  </body>
 </html>

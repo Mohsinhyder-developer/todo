@@ -7,7 +7,7 @@ const userData = JSON.parse(localStorage.getItem('userData')) || {
     name: 'User Name',
     profilePic: 'https://via.placeholder.com/32'
 };
-document.getElementById('userName').textContent = userData.name;
+document.getElementById('userName').textContent = userData.name.username;
 document.getElementById('profilePic').src = userData.profilePic;
 
 function addTask(text) {
