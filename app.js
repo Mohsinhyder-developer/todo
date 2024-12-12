@@ -102,3 +102,6 @@ function isLoggedIn(req, res, next) {
 }
 
 app.listen(PORT, () => console.log(`Server started at PORT:${PORT}`));
+
+
+module.exports = app;
