@@ -25,7 +25,9 @@ app.post("/create", async (req, res) => {
   try {
     const existingUser = await userModel.findOne({ email });
     if (existingUser) {
-        return res.render("signup", { errorMessage: "Email already exists. Please try a different one." });
+      return res.render("signup", {
+        errorMessage: "Email already exists. Please try a different one.",
+      });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -64,7 +66,9 @@ app.post("/login", async (req, res) => {
       res.cookie("token", token);
       res.redirect("/profile");
     } else {
-      res.status(400).send("The username or password is incorrect. Please try again");
+      res
+        .status(400)
+        .send("The username or password is incorrect. Please try again");
     }
   } catch (error) {
     console.error(error);
