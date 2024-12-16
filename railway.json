@@ -1,0 +1,19 @@
+{
+  "project": "todo-app",
+  "plugins": [
+    {
+      "name": "mongodb",
+      "type": "database"
+    },
+  ],
+  "deployments": {
+    "production": {
+      "branch": "main",
+      "plugins": {
+        "mongodb": {
+          "database": "todo-app"
+        }
+      }
+    }
+  }
+}
