@@ -16,6 +16,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
+  res.send("hello page is working");
+});
+
+app.get("/signup", (req, res) => {
   res.render("signup");
 });
 
